@@ -5,9 +5,9 @@ import 'package:memo_app/screens/memo_edit_screen.dart';
 
 class MemoDetailScreen extends StatelessWidget {
   final Memo memo;
-  final DatabaseHelper _dbHelper = DatabaseHelper();
+  static final DatabaseHelper _dbHelper = DatabaseHelper();
 
-  MemoDetailScreen({super.key, required this.memo});
+  const MemoDetailScreen({super.key, required this.memo});
 
   Future<void> _deleteMemo(BuildContext context) async {
     final result = await showDialog<bool>(
