@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:memo_app/screens/splash_screen.dart';
+import 'package:memo_app/screens/memo_list_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: const SplashScreen(),
+      home: const MemoListScreen(),
     );
   }
 }

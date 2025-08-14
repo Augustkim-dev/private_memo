@@ -140,14 +140,13 @@ class _MemoListScreenState extends State<MemoListScreen> {
                             setState(() {
                               _memos.removeAt(index);
                             });
-                            if (mounted) {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                  content: Text('메모가 삭제되었습니다.'),
-                                  duration: Duration(seconds: 2),
-                                ),
-                              );
-                            }
+                            if (!context.mounted) return;
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                content: Text('메모가 삭제되었습니다.'),
+                                duration: Duration(seconds: 2),
+                              ),
+                            );
                           }
                         },
                         child: Card(
